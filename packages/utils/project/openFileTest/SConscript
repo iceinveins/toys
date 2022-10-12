@@ -1,0 +1,11 @@
+import buildhelper as buildhelper
+Import('genv')
+
+env = Environment()
+
+components = []
+              
+deps = []
+buildhelper.buildProject(genv, env, deps, components, [], [])
+
+env.Append(CPPDEFINES = ['linux'])
